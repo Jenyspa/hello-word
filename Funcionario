@@ -1,0 +1,45 @@
+public class Funcionario {
+
+	String nome;
+	String departamento;
+	double salario;
+	Data dataEntrada = new Data();
+	String rg;
+	boolean estaNaEmpresa;
+
+	void recebeAumento(double aumento) {
+		this.salario += aumento;
+	}
+
+	double calculaGanhoAnual() {
+		double anual = this.salario * 12;
+		return anual;
+	}
+
+	boolean demite(Funcionario nome) {
+
+		return nome.estaNaEmpresa = false;
+	}
+
+	String confirmaPresenca() {
+		if (estaNaEmpresa) {
+			return "Sim";
+		} else {
+			return "Não";
+		}
+	}
+
+	void mostra() {
+		System.out.println("Nome: " + this.nome);
+		System.out.println("Departamento: " + this.departamento);
+		System.out.println("Salário: " + this.salario);
+		System.out.println("RG: " + this.rg);
+		System.out.println("Está na empresa? " + this.confirmaPresenca());
+		System.out.println("Cálculo Anual do Salário: "
+				+ this.calculaGanhoAnual());
+		System.out.println("Dia: " + this.dataEntrada.dia);
+		System.out.println("Mês: " + this.dataEntrada.mes);
+		System.out.println("Ano: " + this.dataEntrada.ano);
+	}
+
+}
